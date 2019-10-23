@@ -31,10 +31,14 @@
 }
 
 .lineChart{
-    max-width: 70%;
     grid-area: line;
     justify-content: center;
+    display: block;
+    text-align: center;
+    margin-left:10%;
+    margin-right:10%;
 }
+
 
 .barChart{
 
@@ -133,4 +137,8 @@ header {
   width:30px;
   margin:20px auto;
 
+}
+
+canvas {
+    max-width: 100vw;
 }

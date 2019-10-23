@@ -2,7 +2,6 @@ var lineChart = document.getElementById('lineChart').getContext('2d');
 var chart = new Chart(lineChart, {
     // The type of chart we want to create
     type: 'line',
-
     // The data for our dataset
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -13,10 +12,13 @@ var chart = new Chart(lineChart, {
             data: [0, 10, 5, 2, 20, 30, 45]
         }]
     },
-
     // Configuration options go here
-    options: {}
+    options: {responsive: true,
+  maintainAspectRatio: false,}
 });
+chart.canvas.parentNode.style.height = '400px';
+chart.canvas.parentNode.style.width = '80%';
+
 
 var barChart = document.getElementById('barChart').getContext('2d');
 var myBarChart = new Chart(barChart, {
@@ -31,7 +33,8 @@ var myBarChart = new Chart(barChart, {
         }]
     },
 
-    options:{}
+  //   options:{responsive: true,
+  // maintainAspectRatio: false,}
 });
 
 var pieChart = document.getElementById('pieChart').getContext('2d');
@@ -46,5 +49,6 @@ var myBarChart = new Chart(pieChart, {
         }]
     },
 
-    options:{}
+  //   options:{responsive: true,
+  // maintainAspectRatio: false,}
 });
