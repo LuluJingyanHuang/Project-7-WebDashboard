@@ -13,11 +13,11 @@ var chart = new Chart(lineChart, {
         }]
     },
     // Configuration options go here
-    options: {responsive: true,
-  maintainAspectRatio: false,}
+  //   options: {responsive: true,
+  // maintainAspectRatio: false,}
 });
-chart.canvas.parentNode.style.height = '400px';
-chart.canvas.parentNode.style.width = '80%';
+// chart.canvas.parentNode.style.height = '400px';
+// chart.canvas.parentNode.style.width = '80%';
 
 
 var barChart = document.getElementById('barChart').getContext('2d');
