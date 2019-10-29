@@ -1,10 +1,31 @@
 var banner= document.querySelector('.alertbar button');
+var submit=document.querySelector('.submit');
 
 banner.addEventListener('click',()=>{
     document.querySelector('.alertbar').style.opacity= 0;
     document.querySelector('.alertbar').style.transition = "3s";
     console.log('ah');
 
+});
+
+
+// user.addEventListener("keyup", event => {
+//
+//     }
+
+submit.addEventListener('click',()=>{
+      var user=document.querySelector('.user');
+      var message=document.querySelector('.userMessage');
+      if(user.value === ""){
+        alert('please select a user');
+      } else if(message.value === "") {
+        alert('Please enter a message');
+      }else{
+        alert('Submission Successful');
+        user.value ='';
+        message.value='';
+      }
+    console.log(user);
 });
 
 
