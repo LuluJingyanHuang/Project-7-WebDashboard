@@ -1,4 +1,4 @@
-var banner= document.querySelector('.alertbar button')
+var banner= document.querySelector('.alertbar button');
 
 banner.addEventListener('click',()=>{
     document.querySelector('.alertbar').style.opacity= 0;
@@ -6,6 +6,36 @@ banner.addEventListener('click',()=>{
     console.log('ah');
 
 });
+
+
+$("select").on("click" , function() {
+
+  $(this).parent(".").toggleClass("open");
+
+});
+
+$(document).mouseup(function (e)
+{
+    var container = $(".select-box");
+
+    if (container.has(e.target).length === 0)
+    {
+        container.removeClass("open");
+    }
+});
+
+
+$("select").on("change" , function() {
+
+  var selection = $(this).find("option:selected").text(),
+      labelFor = $(this).attr("id"),
+      label = $("[for='" + labelFor + "']");
+
+  label.find(".label-desc").html(selection);
+
+});
+
+
 
 
 
